@@ -4,7 +4,7 @@
 
 <template>
     
-    <section class="hero bg-cover bg-center bg-no-repeat">
+    <section class="hero">
         <div class="mx-auto max-w-screen-xl px-4 py-32 lg:flex lg:h-screen lg:items-center">
             <div class="mx-auto max-w-3xl text-center backdrop-blur-lg bg-white/30" v-motion-slide-visible-bottom >
                 <div class="pt-4 pb-4">
@@ -23,6 +23,6 @@
 </template>
 <style>
     .hero {
-        background: url('../assets/hero.jpg');
+        background: url('../assets/hero.jpg') center center/cover no-repeat;
     }
 </style>
