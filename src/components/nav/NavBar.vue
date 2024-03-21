@@ -21,7 +21,7 @@ const setCurrentSelection = (value) => {
                     <!-- Logo -->
                     <div class="shrink-0 flex items-center">
                         <a href="#inicio" @click="setCurrentSelection('')">
-                            <!-- <img class="block h-12 w-auto fill-currenttext-gray-200" src="/src/assets/logo/Logo.png" alt="Logo">  -->
+                            <img class="block h-12 w-auto fill-currenttext-gray-200" src="../../assets/Logo.png" alt="Logo"> 
                         </a>   
                     </div>
 
