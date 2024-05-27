@@ -1,5 +1,5 @@
 <script setup>
-import ContactCard from '../components/ContactCard.vue';
+import ContactCard from '../core/ContactCard.vue'
 
 </script>
 

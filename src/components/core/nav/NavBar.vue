@@ -21,7 +21,7 @@ const setCurrentSelection = (value) => {
                     <!-- Logo -->
                     <div class="shrink-0 flex items-center">
                         <a href="#inicio" @click="setCurrentSelection('')">
-                            <img class="block h-12 w-auto fill-currenttext-gray-200" src="../../assets/Logo.png" alt="Logo"> 
+                            <img class="block h-12 w-auto fill-currenttext-gray-200" src="../../../assets/Logo.png" alt="Logo"> 
                         </a>   
                     </div>
 
@@ -31,7 +31,7 @@ const setCurrentSelection = (value) => {
                             Inicio
                         </NavLink>
                         <NavLink @click="setCurrentSelection('servicios')" href="#servicios" :active="(currentSelection == 'servicios' ? true :false)">
-                            Servicios
+                            Proyectos
                         </NavLink>
                         <NavLink @click="setCurrentSelection('contactanos')" href="#contactanos" :active="(currentSelection == 'contactanos' ? true :false)">
                            Contáctanos
@@ -107,7 +107,7 @@ const setCurrentSelection = (value) => {
                     Inicio
                 </ResponsiveNavLink>
                 <ResponsiveNavLink @click="setCurrentSelection('servicios')" :href="'#servicios'" :active="(currentSelection == 'servicios' ? true :false)">
-                    Servicios
+                    Proyectos
                 </ResponsiveNavLink>
                 <ResponsiveNavLink @click="setCurrentSelection('contactanos')" :href="'#contactanos'" :active="(currentSelection == 'contactanos' ? true :false)">
                     Contactanos

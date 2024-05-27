@@ -1,0 +1,426 @@
+<script setup>
+import { onMounted, ref } from 'vue';
+import Swiper from 'swiper';
+import { Navigation, Pagination, Parallax, Autoplay } from 'swiper/modules';
+
+import nave1 from '../../assets/nave1.jpg';
+import planos1 from '../../assets/planos1.jpg';
+
+const slides = [
+    {
+        imgSrc: 'https://i.pinimg.com/originals/3b/57/2d/3b572d0454acd0be60331f060e9c1743.webp',
+        title: 'Elaboración de planos arquitectónicos',
+        description: 'Planos, detalles constructivos, trámites y permisos para cualquier tipo de proyectos.'
+    },
+    {
+        imgSrc: 'https://media.admagazine.com/photos/618a709a72049e253173ee7c/master/w_1600%2Cc_limit/56036.jpg',
+        title: 'Desarrollo Arquitectónico',
+        description: 'Desarrollo arquitectónico para ambientes interiores y exteriores con materiales de alta calidad.'
+    },
+    {
+        imgSrc: 'https://www.facilitymanagementservices.es/wp-content/uploads/sites/3/2023/08/naveindustrial.jpg',
+        title: 'Desarrollo de proyectos industriales',
+        description: 'Naves industriales, plantas, parques industriales y parques de servicios.'
+    }
+];
+
+onMounted(() => {
+    const swiper = new Swiper(".mySwiper2", {
+    modules: [Navigation, Pagination, Parallax, Autoplay],
+	parallax: true,
+    loop: true,
+	speed: 1200,
+	effect: 'slide',
+    direction: "vertical",
+    autoplay: true,
+	navigation: {
+	  nextEl: '.upk-button-next',
+	  prevEl: '.upk-button-prev',
+	},
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+});
+
+});
+</script>
+
+<template>
+    <div class="root-container">
+        <div class="bdt-timeline-container">
+            <div class="upk-salf-slider-wrapper">
+                <div class="swiper-container mySwiper2">
+                    <div class="swiper-wrapper">
+                        <div class="upk-salf-item swiper-slide" v-for="slide in slides" :key="slide.title">
+                            <div class="upk-salf-image-wrap">
+                                <img class="upk-xanc-img" :src="slide.imgSrc"/>
+                            </div>
+                            <div class="upk-salf-content-wrap">
+                                <h3 class="upk-salf-title" data-swiper-parallax-y="-150" data-swiper-parallax-duration="1200">
+                                    {{slide.title}}
+                                </h3>
+                                <div class="upk-salf-desc" data-swiper-parallax-y="-200" data-swiper-parallax-duration="1400" >
+                                    {{slide.description}}
+                                </div>
+                                <div class="upk-salf-button" data-swiper-parallax-y="-300" data-swiper-parallax-duration="1500">
+                                    <button class="link link--arrowed">Ver mas</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="upk-salf-nav-pag-wrap">             
+                    <div class="upk-salf-navigation">
+                        <div class="upk-button-prev upk-n-p">
+                            <a class="link link--arrowed" href="#">
+                                <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 32 32">
+                                    <g fill="none" stroke="#ff215a" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="10">
+                                    <circle class="arrow-icon--circle" cx="16" cy="16" r="15.12"></circle>
+                                    <path class="arrow-icon--arrow" d="M16.14 9.93L22.21 16l-6.07 6.07M8.23 16h13.98"></path>
+                                    </g>
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="upk-button-next upk-n-p">
+                            <a class="link link--arrowed" href="#">
+                                <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 32 32">
+                                    <g fill="none" stroke="#ff215a" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="10">
+                                    <circle class="arrow-icon--circle" cx="16" cy="16" r="15.12"></circle>
+                                    <path class="arrow-icon--arrow" d="M16.14 9.93L22.21 16l-6.07 6.07M8.23 16h13.98"></path>
+                                    </g>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+
+<style scoped lang="scss">
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	vertical-align: middle;
+    overflow: hidden;
+}
+.root-container{
+    margin-top: 50px;
+}
+.bdt-timeline-container {
+	display: flow-root;
+    box-sizing: content-box;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+	overflow: hidden;
+	margin-top: 50px;
+}
+
+.upk-salf-slider-wrapper {
+	display: flex;
+	flex-direction: row;
+	background: #fff;
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+	height: 400px;
+	padding: 30px;
+	position: relative;
+
+.upk-salf-item {
+	position: relative;
+	display: flex;
+	flex-direction: row-reverse;
+	&.swiper-slide-active {
+		.upk-salf-content-wrap {
+		}
+		.upk-salf-title,
+		.upk-salf-desc,
+		.upk-salf-button   {
+			opacity: 1;
+		}
+	}
+	.upk-salf-image-wrap {
+		height: 100%;
+		width: 100%;
+	}
+	.upk-xanc-img {
+		display: block;
+		width: 100%;
+		height: 800px;
+		object-fit: cover;
+	}
+	.upk-salf-content-wrap {
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		top: unset;
+		max-width: 460px;
+		overflow: hidden;
+		background: #ffffff8a;
+		backdrop-filter: blur(15px);
+		transition: backdrop-filter 0.9s;
+		padding: 20px;
+		padding-left: 20px;
+	}
+	.upk-salf-title {
+		font-size: 23px;
+		font-weight: 700;
+		line-height: 1.2;
+		color: #2B2D42;
+		text-transform: capitalize;
+		margin-bottom: 20px;
+		opacity: 0;
+	}
+	.upk-salf-desc {
+		color: #656565;
+		font-size: 14px;
+		line-height: 1.6;
+		text-transform: capitalize;
+		margin-bottom: 20px;
+		opacity: 0;
+	}
+	.upk-salf-button {
+		opacity: 0;
+		.link {
+			color: #2b2d42;
+			cursor: pointer;
+			font-weight: 500;
+			text-decoration: none;
+			text-transform: capitalize;
+			font-size: 14px;
+			transition: all .3s ease;
+			&:hover {
+				color: #ff215a;
+			}
+		}
+		.link--arrowed {
+			display: flex;
+			.arrow-icon {
+				position: relative;
+				top: 0;
+				-webkit-transition: -webkit-transform 0.3s ease;
+				transition: -webkit-transform 0.3s ease;
+				transition: transform 0.3s ease;
+				transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+				vertical-align: middle;
+			}
+			.arrow-icon--circle {
+				transition: stroke-dashoffset .3s ease;
+				stroke-dasharray: 95;
+				stroke-dashoffset: 95;
+			}
+			g {
+				stroke: currentColor;
+				color: #2b2d42;
+			}
+			&:hover {
+				.arrow-icon {
+					transform: translate3d(5px, 0, 0);
+				}
+				.arrow-icon--circle {
+					stroke-dashoffset: 0;
+				}
+				g {
+					color: #ff215a;
+				}
+			}
+		}
+	}
+}
+
+.upk-page-scroll {
+	position: absolute;
+    bottom: 8%;
+    right: 5%;
+    transform: rotate(90deg);
+    z-index: 1;
+	display: none;
+	.arrow-up {
+		height: 70px;
+		width: 70px;
+		display: block;
+		background: #ffffffc9;
+		backdrop-filter: blur(18px);
+		position: relative;
+		cursor: pointer;
+		transition: all .5s cubic-bezier(0.25, 1.7, 0.35, 1.5);
+		transform: rotate(-90deg);
+		overflow: hidden;
+	}
+	.arrow-slide {
+		left: 0;
+		top: -100%;
+		width: 100%;
+		height: 100%;
+		background: #ff215a;
+		position: absolute;
+		display: block;
+		z-index: 0;
+	}
+	.long-arrow-left{
+		display: block;
+		margin: 30px auto;
+		width: 16px;
+		height: 16px;
+		border-top: 2px solid #2b2d42;
+		border-left: 2px solid #2b2d42;
+	}
+	.long-arrow-left{
+	transform: rotate(-135deg);
+	}
+	.long-arrow-left::after{
+			content: "";
+		display: block;
+		width: 2px;
+		height: 25px;
+		background-color: #2b2d42;
+		transform: rotate(
+	-45deg
+	) translate(8px, 3px);
+		left: 0;
+		top: 0;
+	}
+	.arrow-up:hover {
+		transition: all .1s;
+		.left-arm:after {
+		transform: rotate(-10deg);
+		}
+		.right-arm:after {
+		transform: rotate(10deg);
+		}
+		.arrow-slide {
+		transition: all .5s ease-in-out;
+		transform: translateY(200%);
+		}
+	}
+}
+
+.upk-salf-nav-pag-wrap {
+	position: absolute;
+	top: 200px;
+	height: 100%;
+	right: 0;
+}
+.upk-salf-navigation {
+	margin-top: 40px;
+	margin-right: 2px;
+	.link--arrowed {
+		display: inline-block;
+		.arrow-icon {
+			position: relative;
+			top: 0;
+			-webkit-transition: -webkit-transform 0.3s ease;
+			transition: -webkit-transform 0.3s ease;
+			transition: transform 0.3s ease;
+			transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+			vertical-align: middle;
+		}
+		g {
+			stroke: currentColor;
+			color: #2b2d42;
+		}
+		&:hover {
+			g {
+				color: #ff215a;
+			}
+		}
+
+	}
+	.upk-button-next {
+		margin-top: 15px;
+		transform: rotate(90deg);
+	}
+	.upk-button-prev {
+		transform: rotate(-90deg);
+	}
+}
+
+
+}
+
+@media  (min-width:768px)  {
+	.upk-salf-slider-wrapper {
+		height: 550px;
+		padding: 60px;
+		.upk-page-scroll {
+			bottom: 4%;
+			display: inherit;
+		}
+		.upk-salf-item {
+			.upk-salf-title {
+				font-size: 40px;
+			}
+			.upk-salf-content-wrap {
+				max-width: 400px;
+				padding: 40px;
+				padding-left: 0;
+				top: 50%;
+				transform: translateY(-50%);
+				bottom: unset;
+			}
+			.upk-salf-image-wrap {
+				width: 80%;
+			}
+		}
+		.upk-salf-navigation {
+			margin-top: 60px;
+			margin-right: 20px;
+		}
+
+		
+	}
+}
+@media (min-width: 1024px) { 
+	.upk-salf-slider-wrapper {
+		height: 650px;
+		padding: 70px;
+		.upk-page-scroll {
+			bottom: 9%;
+		}
+		.upk-salf-item {
+			.upk-salf-title {
+				font-size: 45px;
+			}
+			.upk-salf-content-wrap {
+				max-width: 460px;
+				padding: 50px;
+				padding-left: 0;
+			}
+			.upk-salf-desc {
+				font-size: 16px;
+			}
+			.upk-salf-button {
+				.link {
+					font-size: 16px;
+				}
+			}
+			.upk-salf-image-wrap {
+				width: 70%;
+			}
+		}
+		.upk-salf-navigation {
+			margin-top: 85px;
+			margin-right: 30px;
+		}
+		
+    }
+}
+@media (min-width: 1440px) { 
+	.upk-salf-slider-wrapper {
+		height: 700px;
+		padding: 80;
+
+	.upk-salf-item {
+		.upk-salf-title {
+			font-size: 50px;
+		}
+	}
+   }
+}
+</style>

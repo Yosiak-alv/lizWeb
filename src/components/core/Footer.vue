@@ -6,7 +6,7 @@ const currentYear = new Date().getFullYear();
     <footer class="text-gray-900 bg-white shadow m-4 mx-auto">
         <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
             <div class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
-                <img class="block h-12 w-auto fill-currenttext-gray-200" src="../assets/Logo.png" alt="Logo"> 
+                <img class="block h-12 w-auto fill-currenttext-gray-200" src="../../assets/Logo.png" alt="Logo"> 
             </div>
             <p class="text-sm sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">&copy; {{currentYear}} Liz Alvarenga.
                 Made By 
