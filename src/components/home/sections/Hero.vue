@@ -1,48 +1,33 @@
 <script setup>
 import { onMounted, ref } from 'vue';
+import {useRouter} from 'vue-router';
+import { slidesData } from '../../../utils/data';
 import Swiper from 'swiper';
 import { Navigation, Pagination, Parallax, Autoplay } from 'swiper/modules';
 
-import nave1 from '../../assets/nave1.jpg';
-import planos1 from '../../assets/planos1.jpg';
-
-const slides = [
-    {
-        imgSrc: 'https://i.pinimg.com/originals/3b/57/2d/3b572d0454acd0be60331f060e9c1743.webp',
-        title: 'Elaboración de planos arquitectónicos',
-        description: 'Planos, detalles constructivos, trámites y permisos para cualquier tipo de proyectos.'
-    },
-    {
-        imgSrc: 'https://media.admagazine.com/photos/618a709a72049e253173ee7c/master/w_1600%2Cc_limit/56036.jpg',
-        title: 'Desarrollo Arquitectónico',
-        description: 'Desarrollo arquitectónico para ambientes interiores y exteriores con materiales de alta calidad.'
-    },
-    {
-        imgSrc: 'https://www.facilitymanagementservices.es/wp-content/uploads/sites/3/2023/08/naveindustrial.jpg',
-        title: 'Desarrollo de proyectos industriales',
-        description: 'Naves industriales, plantas, parques industriales y parques de servicios.'
-    }
-];
+const router = useRouter();
+const goToProjects = () => {
+	router.push({name: 'projects'});
+}
 
 onMounted(() => {
     const swiper = new Swiper(".mySwiper2", {
-    modules: [Navigation, Pagination, Parallax, Autoplay],
-	parallax: true,
-    loop: true,
-	speed: 1200,
-	effect: 'slide',
-    direction: "vertical",
-    autoplay: true,
-	navigation: {
-	  nextEl: '.upk-button-next',
-	  prevEl: '.upk-button-prev',
-	},
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-});
-
+		modules: [Navigation, Pagination, Parallax, Autoplay],
+		parallax: true,
+		loop: true,
+		speed: 1200,
+		effect: 'slide',
+		direction: "vertical",
+		autoplay: true,
+		navigation: {
+		nextEl: '.upk-button-next',
+		prevEl: '.upk-button-prev',
+		},
+		pagination: {
+		el: ".swiper-pagination",
+		clickable: true,
+		},
+	});
 });
 </script>
 
@@ -52,7 +37,7 @@ onMounted(() => {
             <div class="upk-salf-slider-wrapper">
                 <div class="swiper-container mySwiper2">
                     <div class="swiper-wrapper">
-                        <div class="upk-salf-item swiper-slide" v-for="slide in slides" :key="slide.title">
+                        <div class="upk-salf-item swiper-slide" v-for="slide in slidesData()" :key="slide.id">
                             <div class="upk-salf-image-wrap">
                                 <img class="upk-xanc-img" :src="slide.imgSrc"/>
                             </div>
@@ -64,13 +49,12 @@ onMounted(() => {
                                     {{slide.description}}
                                 </div>
                                 <div class="upk-salf-button" data-swiper-parallax-y="-300" data-swiper-parallax-duration="1500">
-                                    <button class="link link--arrowed">Ver mas</button>
+                                    <button @click="goToProjects()" class="link link--arrowed">Ver mas</button>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                
                 <div class="upk-salf-nav-pag-wrap">             
                     <div class="upk-salf-navigation">
                         <div class="upk-button-prev upk-n-p">
@@ -196,7 +180,7 @@ onMounted(() => {
 			font-size: 14px;
 			transition: all .3s ease;
 			&:hover {
-				color: #ff215a;
+				color: #16A34A;
 			}
 		}
 		.link--arrowed {
@@ -227,7 +211,7 @@ onMounted(() => {
 					stroke-dashoffset: 0;
 				}
 				g {
-					color: #ff215a;
+					color: #16A34A;
 				}
 			}
 		}
@@ -258,7 +242,7 @@ onMounted(() => {
 		top: -100%;
 		width: 100%;
 		height: 100%;
-		background: #ff215a;
+		background: #16A34A;
 		position: absolute;
 		display: block;
 		z-index: 0;
@@ -327,7 +311,7 @@ onMounted(() => {
 		}
 		&:hover {
 			g {
-				color: #ff215a;
+				color: #16A34A;
 			}
 		}
 

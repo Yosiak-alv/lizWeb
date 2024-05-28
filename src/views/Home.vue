@@ -1,8 +1,8 @@
 <script setup>
-    import Hero from '../components/home/Hero.vue';
-    import Services from '../components/home/Services.vue';
-    import Contact from '../components/home/Contact.vue';
-    import Testimonials from '../components/home/Testimonials.vue';
+    import Hero from '../components/home/sections/Hero.vue';
+    import Services from '../components/home/sections/Services.vue';
+    import Testimonials from '../components/home/sections/Testimonials.vue';
+    import Contact from '../components/home/sections/Contact.vue';
 </script>
 
 <template>
