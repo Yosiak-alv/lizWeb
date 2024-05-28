@@ -14,5 +14,16 @@ html,body{
     width: 100%;
     height: 100%;
     padding-right: 0 !important; 
-    overflow-x: hidden;
+    
 }
+#nprogress .bar {
+    background: #14532D !important;
+  }
+  
+#nprogress .peg {
+    box-shadow: 0 0 10px #14532D, 0 0 5px #14532D !important;
+}
+#nprogress .spinner .spinner-icon {
+    border-top-color: #648771 !important;
+    border-left-color: #648771 !important;
+ }
