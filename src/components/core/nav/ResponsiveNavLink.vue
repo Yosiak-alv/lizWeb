@@ -1,6 +1,8 @@
 <script setup>
 import { computed } from 'vue';
+import { useRouter } from 'vue-router';
 
+const router = useRouter();
 const props = defineProps({
     href: {
         type: String,
@@ -11,6 +13,10 @@ const props = defineProps({
     },
 });
 
+const handleClick = () => {
+    router.push(props.href);
+};
+
 const classes = computed(() =>
     props.active
         ? 'block w-full pl-3 pr-4 py-2 border-l-4 border-gray-600 text-left text-base font-medium text-gray-200 bg-gray-900/50 focus:outline-none focus:text-gray-200 focus:bg-gray-900 focus:border-gray-300 transition duration-150 ease-in-out'
@@ -19,7 +25,7 @@ const classes = computed(() =>
 </script>
 
 <template>  
-    <a :href="href" :class="classes">
+   <button @click="handleClick()" :class="classes">
         <slot />
-    </a>
+    </button>
 </template>
