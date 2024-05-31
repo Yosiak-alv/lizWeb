@@ -1,70 +1,8 @@
-import certificate from '../assets/icons/certificate.svg';
 import insta from '../assets/icons/insta.svg';
 import linkedin from '../assets/icons/linkedin.svg';
 import mail from '../assets/icons/mail.svg';
 import phone from '../assets/icons/phone.svg';
 import map from '../assets/icons/map.svg';
-
-const servicesData = () => {
-    return [
-        {
-            title: 'SEO Services',
-            description: 'This is a wider card with supporting text below as a natural content.',
-            icon: certificate
-        },
-        {
-            title: 'SEO Services',
-            description: 'This is a wider card with supporting text below as a natural content.',
-            icon: certificate
-        },
-        {
-            title: 'SEO Services',
-            description: 'This is a wider card with supporting text below as a natural content.',
-            icon: certificate
-        },
-        {
-            title: 'SEO Services',
-            description: 'This is a wider card with supporting text below as a natural content.',
-            icon: certificate
-        },
-        {
-            title: 'SEO Services',
-            description: 'This is a wider card with supporting text below as a natural content.',
-            icon: certificate
-        },
-        {
-            title: 'SEO Services',
-            description: 'This is a wider card with supporting text below as a natural content.',
-            icon: certificate
-        }
-    ];
-}
-
-const testimonialData = () => { 
-    return [
-        {
-            id: 1,
-            name: 'Jane Doe',
-            title: 'Product Designer',
-            image: 'https://tailus.io/sources/blocks/grid-cards/preview/images/avatars/second_user.webp',
-            content: 'LLorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat repellat perspiciatis excepturi est. Non ipsum iusto aliquam consequatur repellat provident, omnis ut, sapiente voluptates veritatis cum deleniti repudiandae ad doloribus.'
-        },
-        {
-            id: 2,
-            name: 'John Doe',
-            title: 'Product Manager',
-            image: 'https://tailus.io/sources/blocks/grid-cards/preview/images/avatars/first_user.webp',
-            content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat repellat perspiciatis excepturi est. Non ipsum iusto aliquam consequatur repellat provident, omnis ut, sapiente voluptates veritatis cum deleniti repudiandae ad doloribus.'
-        },
-        {
-            id: 3,
-            name: 'John Doe',
-            title: 'Product Manager',
-            image: 'https://tailus.io/sources/blocks/grid-cards/preview/images/avatars/first_user.webp',
-            content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat repellat perspiciatis excepturi est. Non ipsum iusto aliquam consequatur repellat provident, omnis ut, sapiente voluptates veritatis cum deleniti repudiandae ad doloribus.'
-        }
-    ];
-}
 
 const contactData = () => {
     return [
@@ -114,65 +52,24 @@ const slidesData = () => {
     return [
         {
             id: 1,
-            imgSrc: 'https://i.pinimg.com/originals/3b/57/2d/3b572d0454acd0be60331f060e9c1743.webp',
-            title: 'Elaboración de planos arquitectónicos',
-            description: 'Planos, detalles constructivos, trámites y permisos para cualquier tipo de proyectos.'
-        },
-        {
-            id: 2,
             imgSrc: 'https://media.admagazine.com/photos/618a709a72049e253173ee7c/master/w_1600%2Cc_limit/56036.jpg',
-            title: 'Desarrollo Arquitectónico',
-            description: 'Desarrollo arquitectónico para ambientes interiores y exteriores con materiales de alta calidad.'
-        },
-        {
-            id: 3,
-            imgSrc: 'https://www.facilitymanagementservices.es/wp-content/uploads/sites/3/2023/08/naveindustrial.jpg',
-            title: 'Desarrollo de proyectos industriales',
-            description: 'Naves industriales, plantas, parques industriales y parques de servicios.'
-        }
-    ];
-}
-
-const projectsData = () => {
-    return [
-        {
-            id: 1,
-            title: 'Noteworthy technology acquisitions 2021',
-            description: 'Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.',
-            image: 'https://www.talasur.com/img/upload/1_43_exteriores-piscina%20(1).png'
+            title: 'Diseño Arquitectónico',
+            description: 'Con un enfoque centrado en el diseño innovador y la funcionalidad, creamos ambientes que se adaptan a tu estilo de vida y reflejan tu personalidad.' 
         },
         {
             id: 2,
-            title: 'Noteworthy technology acquisitions 2021',
-            description: 'Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.',
-            image: 'https://www.talasur.com/img/upload/1_43_exteriores-piscina%20(1).png'
+            imgSrc: 'https://www.facilitymanagementservices.es/wp-content/uploads/sites/3/2023/08/naveindustrial.jpg',
+            title: 'Desarrollo de Proyectos Industriales',
+            description: 'Contamos con 10 años de experiencia en el desarrollo de proyectos industriales estamos capacitados para para cualquier tipo de trabajo de la rama de diseño y construcción de proyectos industriales como: Naves industriales, parques industriales o parques de servicios.'
         },
         {
             id: 3,
-            title: 'Noteworthy technology acquisitions 2021',
-            description: 'Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.',
-            image: 'https://www.talasur.com/img/upload/1_43_exteriores-piscina%20(1).png'
-        },
-        {
-            id: 4,
-            title: 'Noteworthy technology acquisitions 2021',
-            description: 'Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.',
-            image: 'https://www.talasur.com/img/upload/1_43_exteriores-piscina%20(1).png'
-        },
-        {
-            id: 5,
-            title: 'Noteworthy technology acquisitions 2021',
-            description: 'Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.',
-            image: 'https://www.talasur.com/img/upload/1_43_exteriores-piscina%20(1).png'
-        },
-        {
-            id: 6,
-            title: 'Noteworthy technology acquisitions 2021',
-            description: 'Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.',
-            image: 'https://www.talasur.com/img/upload/1_43_exteriores-piscina%20(1).png'
+            imgSrc: 'https://i.pinimg.com/originals/3b/57/2d/3b572d0454acd0be60331f060e9c1743.webp',
+            title: 'Elaboración de Planos Arquitectónicos',
+            description: 'Nuestros servicios abarcan desde la arquitectura hasta el diseño de interiores, exteriores, planificación y mucho más. Nos apasiona transformar tus ideas en realidad y superar tus expectativas.'
         }
     ];
 }
 
-export {servicesData, testimonialData, contactData, slidesData, projectsData}
+export {contactData, slidesData}
 
