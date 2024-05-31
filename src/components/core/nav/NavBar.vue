@@ -28,9 +28,6 @@ const getCurrentRoute = (currentName) => {
                         <NavLink href="/lizWeb" :active="getCurrentRoute('home')">
                             Inicio
                         </NavLink>
-                        <NavLink href="/lizWeb/projects" :active="getCurrentRoute('projects')">
-                            Proyectos
-                        </NavLink>
                         <NavLink href="/lizWeb/contact" :active="getCurrentRoute('contact')">
                             Contáctame
                         </NavLink>
@@ -38,6 +35,13 @@ const getCurrentRoute = (currentName) => {
                 </div>
 
                 <div class="flex space-x-2 pt-4">
+                    <div>
+                        <a href="tel:+50377493748" target="_blank" class="text-gray-500 hover:text-green-600">
+                            <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m18.4 14.8-1.2-1.3a1.7 1.7 0 0 0-2.4 0l-.7.7a1.7 1.7 0 0 1-2.4 0l-1.9-1.9a1.7 1.7 0 0 1 0-2.4l.7-.6a1.7 1.7 0 0 0 0-2.5L9.2 5.6a1.6 1.6 0 0 0-2.4 0c-3.2 3.2-1.7 6.9 1.5 10 3.2 3.3 7 4.8 10.1 1.6a1.6 1.6 0 0 0 0-2.4Z"/>
+                            </svg>
+                        </a>
+                    </div>
                     <div>
                         <a href="https://www.instagram.com/liz_alvare?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="text-gray-500 hover:text-green-600">
                             <svg class="w-6 h-6" fill=  "currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -66,7 +70,7 @@ const getCurrentRoute = (currentName) => {
                 <div class="-mr-2 flex items-center sm:hidden">
                     <button
                         @click="showingNavigationDropdown = !showingNavigationDropdown"
-                        class="inline-flex items-center justify-center p-2 rounded-mdtext-gray-500 hover:text-gray-400 hover:bg-gray-900 focus:outline-none focus:bg-gray-900 focus:text-gray-400 transition duration-150 ease-in-out"
+                        class="inline-flex items-center justify-center p-2 rounded-mdtext-gray-500 hover:text-gray-200 hover:bg-green-700 focus:outline-none focus:bg-green-700 focus:text-green-400 transition duration-150 ease-in-out"
                     >
                         <svg class="h-6 w-6" stroke="currentColor" fill="white" viewBox="0 0 24 24">
                             <path
@@ -103,9 +107,6 @@ const getCurrentRoute = (currentName) => {
             <div class="pt-2 pb-3 space-y-1">
                 <ResponsiveNavLink @click="showingNavigationDropdown = !showingNavigationDropdown" href="/lizWeb" :active="getCurrentRoute('home')">
                     Inicio
-                </ResponsiveNavLink>
-                <ResponsiveNavLink @click="showingNavigationDropdown = !showingNavigationDropdown" href="/lizWeb/projects" :active="getCurrentRoute('projects')">
-                    Proyectos
                 </ResponsiveNavLink>
                 <ResponsiveNavLink @click="showingNavigationDropdown = !showingNavigationDropdown" href="/lizWeb/contact" :active="getCurrentRoute('contact')">
                     Contáctame
