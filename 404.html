@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="refresh" content="0; url=/" />
+    <script>
+      // Redirect to the correct route after reloading
+      (function() {
+        var currentPath = window.location.pathname;
+        var root = '/lizWeb/'; // Adjust this if your app is in a subdirectory
+        var redirectPath = root + '#' + currentPath.replace(root, '');
+        window.location.replace(redirectPath);
+      })();
+    </script>
+  </head>
+  <body></body>
+</html>
